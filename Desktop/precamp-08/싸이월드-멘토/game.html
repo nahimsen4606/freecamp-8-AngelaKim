@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>게임</title>
+        <link href="styles/game.css" rel="stylesheet"/>
+    <script>
+        function startWord(){
+            const word = document.getElementById("word").innerText //코드캠프
+            const lastword = word[word.length -1] //프
+
+            const myword = document.getElementById("myword").value //프랑스
+            const firstword = myword[0] //프
+            
+            if(lastword === firstword){
+                //맞았을때, 정답코드 작성하기
+                const correct = true
+
+            } else {
+                //틀렸을 때, 정답코드 작성하기
+
+                const incorrect. innerText = "정답입니다."
+                const incorrect = " "
+            }
+
+        }
+    </script>
+    
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="wrapper__header">
+                여기는 헤더입니다.
+            </div>
+            <div class="wrapper__word">
+                
+                <div class="wrapper__word__header">
+                    <img src="images/word.png" />
+                    <!-- <div class="wrapper__word__header__title"> -->
+                    <div class="title">
+                        끝말잇기
+                    </div>
+                    <div class="word_title">
+                        제시어: 코드캠프
+                    </div>
+                </div>
+
+                <div class="wrapper__word__body">
+                    <input type="text" placeholder="단어를 입력해주세요.">
+                    <button>검색</button>
+                </div>
+
+                <div class="wrapper__word__footer">
+                    결과!
+                </div>
+
+            </div>
+            <div class="wrapper__lotto">
+                여기는 로또 입니다.
+            </div>
+        </div>    
+    </body>
+</html>

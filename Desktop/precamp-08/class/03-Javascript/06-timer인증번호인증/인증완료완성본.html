@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>타이머</title>
+    <script>
+        
+        let isStarted = false 
+        // 변수명을 주로 어떤 상태를 ~이다/~아니다로 생성 
+        //    스위치 변수
+        function getToken(){
+            if(isStarted === false){
+            
+                isStarted = true
+
+            const token = String(Math.floor(Math.random() * 1000000)).padStart(6, "0")
+            document.getElementById("aaa").innerText = token
+
+            let time = 180
+            setInterval(function(){
+                if(time >= 0){
+                    // const minutes = Math.floor(time / 60)
+                    // const seconds = time % 60 ----밑에 방법1
+                    const minutes = String(Math.floor(time / 60)).padStart(2, "0")
+                   const seconds = String(time % 60).padStart(2, "0") 
+                    document.getElementById("qqq").innerText =  String(minutes).padStart(2, "0") + ":" + seconds
+                    //방법 2는 document.getElementById("qqq").innerText =  minutes(주석:여기를 바꿔줌) + ":" + seconds
+                    time = time - 1
+                }
+            }, 1000)
+        } else {
+            alert("이미 실행되었습니다!")
+        }
+    }
+    </script>
+</head>
+<body>
+    <span id="aaa">000000<br /></span><button onclick="getToken()">인증번호전송</button><br /><br />
+    <span id="qqq">10<br /></span><button>인증완료</button><br /><br />
+</body>
+
+</html>

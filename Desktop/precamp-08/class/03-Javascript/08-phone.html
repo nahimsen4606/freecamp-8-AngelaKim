@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>휴대폰 포커스</title>
+    <script>
+        function changePhone1(){
+            const phone1 = document.getElementById("phone1").value  // 010으로 뜰것이다
+            if (phone1.length === 3) //만약에 폰의 길이가 3이라면이라는 뜻 또한 중괄호가 다르게 해야....
+                document.getElementById("phone2").focus()
+        }
+
+        function changePhone2(){
+            const phone2 = document.getElementById("phone2").value //value 앞 꼭 소문자
+            if (phone2.length === 4)
+            document.getElementById("phone3").focus()
+            
+        
+        }
+    </script>
+
+</head>
+<body>
+    <input id="phone1" type="text" size="3" maxlength="3" oninput="changePhone1()" /> - 
+    <input id="phone2" type="text" size="4" maxlength="4" oninput="changePhone2()" /> - 
+    <input id="phone3" type="text" size="4" maxlength="4" />
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype>
+<html lang="ko">
+<head>
+    <title>돔(DOM) 조작하기 (HTML과 자바스크립트 연결)</title>
+    <script>
+        function aaa(){
+            // alert("안녕하세요!~~~~~~~~~~~~~~~~~~")
+        
+            document.getElementById("qqq").innerText = "반갑습니다."
+        }
+
+        function counter(){
+            const temp = Number(document.getElementById("count").innerText) + 1//0
+            document.getElementById("count").innerText = temp
+        }
+
+        function changeColor(){
+            document.getElementById("ccc").setAttribute("style", 'background-color: yellow')
+
+
+        }
+
+        function setDisabled(){
+            document.getElementById("ddd").setAttribute("disabled", "true")
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div id="qqq">안녕하세요.</div>
+    <button onclick="aaa()">클릭하기!!</button>
+
+    <div id="count">0</div>
+    <button onclick="counter()">숫자올리기!!!</button>
+
+    <!-- // 이번시간에는 속성을 바꾸기 -->
+
+    <button id="ccc" onclick="changeColor()">색깔바꾸기</button>
+    <button id="ddd" onclick="setDisabled()">비활성화 시키기</button>
+</body>
+</html>

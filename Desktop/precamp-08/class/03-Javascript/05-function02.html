@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <title>10월 21일 어제꺼 복습 -버튼 누르면 새창뜨게하고 기존에 문장바뀌는거 -인증번호 실습</title>
+<style></style>
+<head>
+<script>
+    
+const hello=()=> {
+                alert("안녕하세요")
+                    // 화살표 함수 방법
+            }
+            const ABC = ()=>{
+                // 함수자체를 상수에 담아주는 방식- 화살표 함수 방법
+            }
+    function aaa(){
+            // alert("안녕하세요!~~~~~~~~~~~~~~~~~~")
+        
+            const token = String(Math.floor(Math.random() *1000000)).padStart(6, "0")
+            document.getElementById("qqq").innerText = token 
+            
+    }
+</script>
+</head>
+<body>
+    <h1 id="qqq">000000</h1>
+    <button onclick="aaa()">인증번호 전송</button>
+    <div class="">
+
+    </div>
+
+</body>
+</html>

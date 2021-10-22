@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <script>  
+
+         const bbb = () => {
+           const RandomNumber = String(Math.floor(Math.random() * 1000000)).padStart(6,"0")
+           console.log(RandomNumber)
+           document.getElementById("aaa").innerText = RandomNumber
+        }
+        
+            // let time = 180
+            // setInterval(function(){
+            //     if(time >= 0){
+            //     const minutes = Math.floor(time / 60)
+            //     const seconds = time % 60
+            //     console. log(minutes +":" + seconds)
+            //     time = time - 1
+            //     }
+            // }, 1000)
+    </script>
+</head>
+<body>
+    <br />
+    <button onclick="bbb()">인증번호 전송</button>
+    <div id="setInterval"></div><br><br>
+    <button>인증완료</button>
+    <div id="aaa">000000
+    </div>
+</body>
+</html>
